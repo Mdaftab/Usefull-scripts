@@ -155,20 +155,6 @@ else
     fi
 fi
 
-# Install Oh My Zsh: Framework for managing Zsh configuration
-if [ -d "$HOME/.oh-my-zsh" ]; then
-    echo "Oh My Zsh is already installed."
-else
-    echo "Installing Oh My Zsh..."
-    if sudo apt install -y zsh && sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"; then
-        # Change default shell to zsh
-        chsh -s "$(which zsh)"
-        installed_tools+=("Oh My Zsh")
-    else
-        echo "Failed to install Oh My Zsh."
-        failed_tools+=("Oh My Zsh")
-    fi
-fi
 
 ### Container and Kubernetes Tools ###
 
