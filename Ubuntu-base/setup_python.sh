@@ -126,7 +126,7 @@ install_dependencies() {
     done
 }
 
-# Function to install Python
+# Function to install Python 
 install_python() {
     log "Adding deadsnakes PPA..."
     if ! sudo add-apt-repository -y ppa:deadsnakes/ppa >> "${LOGFILE}" 2>&1; then
