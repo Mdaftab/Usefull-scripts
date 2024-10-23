@@ -9,8 +9,16 @@ failed_tools=()
 
 # Function to check if a command exists
 command_exists() {
-    command -v "$1" >/dev/null 2>&1
+    local cmd="$1"
+    if command -v "$cmd" >/dev/null 2>&1; then
+        echo "Command $cmd exists"
+        return 0
+    else
+        echo "Command $cmd does not exist"
+        return 1
+    fi
 }
+
 
 # Update package lists
 echo "Updating package lists..."
