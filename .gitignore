@@ -3,3 +3,6 @@
 *.AppImage
 *.iso
 *.tar.gz
+*.tar.xz
+*.tar.bz2
+*.tar.7z 
